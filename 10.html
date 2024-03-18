@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+<body>
+
+<script>
+    // Ek array mein integers ki series banao
+    let integerSeries = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    // slice() ka istemal karke kisi specific range ke elements ko nikaal kar ek naya array banao
+    let slicedArray = integerSeries.slice(2, 6);
+    console.log("Sliced Array:", slicedArray);
+
+    // Ek array di gayi hai. Us array mein splice() ka istemal karke kuch elements hatao aur unhein ek alag array mein store karo.
+    let originalArray = [10, 20, 30, 40, 50];
+    let removedElements = originalArray.splice(1, 2);
+    console.log("Removed Elements:", removedElements);
+
+    // Ek array di gayi hai. Us array ko shift() karke uska pehla element hatao aur usse ek variable mein store karo.
+    let shiftedElement = originalArray.shift();
+    console.log("Shifted Element:", shiftedElement);
+
+    // Ek array di gayi hai. Us array mein unshift() ka istemal karke ek naya element add karo.
+    originalArray.unshift(60);
+    console.log("Array after unshift():", originalArray);
+
+    // Ek array di gayi hai. Us array mein push() ka istemal karke ek naya element add karo.
+    originalArray.push(70);
+    console.log("Array after push():", originalArray);
+
+    // Ek array di gayi hai. Us array mein pop() ka istemal karke ek element remove karo aur usse ek variable mein store karo.
+    let poppedElement = originalArray.pop();
+    console.log("Popped Element:", poppedElement);
+
+    // Ek array di gayi hai. Us array ko slice() ka istemal karke uske kuch elements ko naye array mein move karo aur original array ko intact rakho.
+    let copiedArray = originalArray.slice(1, 3);
+    console.log("Copied Array:", copiedArray);
+
+    // Ek array di gayi hai. Us array mein splice() ka istemal karke kuch elements ko remove karo aur unhein ek naye array mein store karo.
+    let removedElements2 = originalArray.splice(0, 2);
+    console.log("Removed Elements (after splice):", removedElements2);
+
+    // Ek array di gayi hai. Us array mein shift() ka istemal karke elements ko ek ek karke remove karo aur unhein alag-alag variables mein store karo.
+    let removedElement1 = originalArray.shift();
+    let removedElement2 = originalArray.shift();
+    console.log("Removed Elements (after shift):", removedElement1, removedElement2);
+
+    // Ek array di gayi hai. Us array mein push() ka istemal karke multiple elements ek saath add karo.
+    originalArray.push(80, 90, 100);
+    console.log("Array after push() with multiple elements:", originalArray);
+</script>
+
+</body>
+</html>
